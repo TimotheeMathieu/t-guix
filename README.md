@@ -6,3 +6,4 @@ Contains the following packages
 
 - zathura with synctex support
 - python stable-baselines3 RL library
+- poetry v1.7.1
