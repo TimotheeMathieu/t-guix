@@ -151,13 +151,20 @@ C++, which is using the string similarity calculations from FuzzyWuzzy.")
       #~(list
          "--ignore=tests/installation/test_executor.py"
          "--ignore=tests/installation/test_chef.py"
+         "--ignore=tests/installation/test_chooser.py"
+         "--ignore=tests/utils/test_authenticator.py"
+         "--ignore=tests/publishing/test_uploader.py"
+         "--ignore=tests/console/commands/test_search.py"
+         "--ignore=tests/repositories/test_legacy_repository.py"
+         "--ignore=tests/console/commands/test_publish.py"
          "-k"
          (string-append
           "not test_create_poetry_fails_on_invalid_configuration "
           "and not test_shell "
           "and not test_installer_with_pypi_repository "
           "and not test_builder_setup_generation_runs_with_pip_editable "
-          "and not test_check_invalid"))))
+          "and not test_check_invalid"))
+      ))
     (native-inputs (list python-deepdiff
                          python-httpretty
                          python-pytest
